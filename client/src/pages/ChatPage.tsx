@@ -103,12 +103,20 @@ export function ChatPage() {
 
     const handleSent = (raw: any) => {
       const msg = normalize(raw);
-      appendMessage(msg);
+      const isCurrentDialogMessage =
+        msg.senderId === currentUserId && msg.receiverId === peerUserId;
+      if (isCurrentDialogMessage) {
+        appendMessage(msg);
+      }
     };
 
     const handleReceived = (raw: any) => {
       const msg = normalize(raw);
-      appendMessage(msg);
+      const isCurrentDialogMessage =
+        msg.senderId === peerUserId && msg.receiverId === currentUserId;
+      if (isCurrentDialogMessage) {
+        appendMessage(msg);
+      }
 
       if (msg.senderId === peerUserId && msg.receiverId === currentUserId) {
         socket.emit('message:read', { fromUserId: peerUserId });
