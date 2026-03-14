@@ -1,0 +1,58 @@
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+
+.users-list__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.users-list__item:hover {
+  background-color: #e5e7eb;
+}
+
+.users-list__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background-color: #6366f1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.users-list__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.users-list__name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.users-list__email {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.users-list--state {
+  padding: 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+

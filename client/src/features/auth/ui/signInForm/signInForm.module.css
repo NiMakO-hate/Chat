@@ -1,0 +1,95 @@
+
+.signInForm {
+  padding: 2rem;
+  background: linear-gradient(180deg, #ffffff, #fff9f5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.formTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  transition: var(--transition);
+  background: #fff7f2;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(224, 167, 108, 0.25);
+}
+
+.formInput::placeholder {
+  color: var(--text-light);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  font-family: var(--font-base);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  background: #f8d7da;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 480px) {
+  .signInForm {
+    padding: 1.5rem;
+  }
+  
+  .formTitle {
+    font-size: 1.3rem;
+  }
+}

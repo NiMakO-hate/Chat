@@ -1,0 +1,107 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.tabRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tabBtn {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tabBtn:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.tabBtnActive {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.title {
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem 0.5rem;
+    min-height: calc(100vh - 150px);
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page {
+    padding: 3rem 2rem;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .page {
+    padding: 4rem 3rem;
+  }
+
+  .card {
+    max-width: 700px;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
